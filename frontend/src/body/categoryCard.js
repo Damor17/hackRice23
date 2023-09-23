@@ -3,7 +3,7 @@ import { IoAddCircleOutline } from "react-icons/io5"
 
 const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
     if (mealData.length === 0) {
-        return <div>Loading...</div>;
+        return <div style={{marginTop: "30px"}}>Loading...</div>;
     }
 
     const foodData = mealData[item].food

@@ -26,3 +26,20 @@ footer p:hover {
   right: 20px;
   color: #404232
 }
+
+.day-changer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-changer * {
+  margin-left: 8px;
+}
+
+.chevron {
+  cursor: pointer;
+}
