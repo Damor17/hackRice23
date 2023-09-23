@@ -1,0 +1,94 @@
+header {
+  background-color: #9CBD97;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.cal-tracker-txt {
+  color: #666953;
+  margin-right: auto;
+  margin-left: 50px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.wheat-icon {
+  width: 50px;
+  margin-top: -6px;
+}
+
+.carbs {
+  margin-left: 18px;
+}
+
+.carbs-text {
+  color: white;
+  font-weight: normal;
+}
+
+.grams {
+  font-size: 12px;
+  color: white;
+}
+
+.vertical-break {
+  height: 50px;
+  background-color: white;
+  width: 2px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.fish-icon {
+  color: white;
+  width: 50px;
+  margin-top: -5px;
+}
+
+.protein-text {
+  color: white;
+  font-weight: normal;
+}
+
+.protein, .fat {
+  margin-left: 25px;
+}
+
+.fat-icon {
+  width: 37px;
+}
+
+.fat-text {
+  color: white;
+  font-weight: normal;
+}
+
+.cal-circle {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid #C1D8B5;
+  margin-left: 50px;
+}
+
+.circle-num-cals, .circle-cals-text {
+  color: white;
+}
+
+.circle-num-cals {
+  font-size: 24px;
+}
+
+.circle-cals-text {
+  font-size: 10px;
+}
