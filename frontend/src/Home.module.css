@@ -1,5 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 .home-page {
   height: 100vh;
   width: 100vw;
-  background: url("../public/images/home-img.png") center no-repeat;
+  background: url("../public/images/home-bg.png") center no-repeat;
+  background-size: cover;
+}
+
+.home-header {
+  display: flex;
+  background-color: white;
+  letter-spacing: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #404232;
+  padding-left: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  margin-right: 50px;
+  font-size: 30px;
+  color:#404232;
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 22%;
+  left: 120px;
+}
+
+.personal-calorie-tracker {
+  font-style: italic;
+  font-size: 30px;
+  color: #666953;
+  font-family: 'Lora', serif;
+  letter-spacing: 4px;
+}
+
+.track-rice {
+  margin-top: 20px;
+  font-size: 50px;
+  color: #404232;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 7px;
+}
+
+.your-plates {
+  margin-top: 40px;
+  background-color: #71966d;
+  padding: 15px 20px;
+  font-style: italic;
+  color: #e9ede3;
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #404232;
+  border: none;
+}
+
+.your-plates:hover {
+  background-color: white;
+  color:#404232;
+  cursor: pointer;
 }
