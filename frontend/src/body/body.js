@@ -13,20 +13,15 @@ const Body = ({data, setData}) => {
     return (
       <>
         {isModal ? (
-          <AddFoodModal />
+          <AddFoodModal isModal={isModal} setIsModal= {setIsModal} onClick={() =>setIsModal(!isModal)}/>
         ): (
-          <div>
-
-          </div>
-
-        )}
-
-
-      <div className="divbody">
+          <div className="divbody">
               {categories.map((item, index) => (
                 <CategoryCard key={index} item={item} data={data} setData={setData} isModal={isModal} setIsModal= {setIsModal} />
                 ))}
-        </div>
+          </div>
+
+        )}
       </>
     
     );
