@@ -5,17 +5,26 @@ import { useState } from "react";
 function App() {
   const initialData = {
     BREAKFEAST: {
-      food: ['eggs', 'doubleoats'],
+      food: {
+        eggs : {grams: 10, Carbs: 10, Protein:80, Fat: 20, Calories: 20,  },
+        bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20, Calories: 20 },
+        nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }
+      }
+      ,
       nFacts : {
-        Carbs : '10',
-        Protein: '80',
-        Fat: '65',
+        Carbs : 10,
+        Protein: 80,
+        Fat: 65,
       }
 
     },
 
     LUNCH: {
-      food: ['eggs', 'doubleoats'],
+      food: {
+        eggs : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20},
+        bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20, Calories: 20  },
+        nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }
+      },
       nFacts : {
         Carbs : '10',
         Protein: '80',
@@ -24,7 +33,11 @@ function App() {
 
     },
     DINNER: {
-      food: ['eggs', 'doubleoats'],
+      food: {
+        eggs : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
+        bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
+        nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }}
+      ,
       nFacts : {
         Carbs : '10',
         Protein: '80',
@@ -33,7 +46,11 @@ function App() {
 
     },
     SNACKS: {
-      food: ['eggs', 'doubleoats'],
+      food: {
+        eggs : {grams: 100, Carbs: 100, Protein:80, Fat: 20 , Calories: 300 },
+        bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
+        nuts: {grams: 30, Carbs: 30, Protein:80, Fat: 20 , Calories: 20 }
+      },
       nFacts : {
         Carbs : '10',
         Protein: '80',
