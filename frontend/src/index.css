@@ -91,6 +91,8 @@ header {
   padding:5;
   border-bottom: 2px solid white;
   justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .catHeaderText {
@@ -100,11 +102,19 @@ header {
 
 }
 
+.catHeaderTextCalories {
+  color:white;
+  font-size: 12px;
+  margin-bottom: 20px;
+
+}
+
 .catBody {
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 5%;
 
 }
 
@@ -114,6 +124,7 @@ header {
   margin-bottom: 15%;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .catItemTypeText {
@@ -130,13 +141,27 @@ header {
 }
 
 .catIcon {
-  width: 30px;
+  width: 60px;
   margin-top: -6px;
 }
 
 .catTypeNAmount {
   display: flex;
   flex-direction: column;
-  left:0;
+  left:50%;
+  position: absolute;
+
+}
+
+.catCardFooter {
+  padding: 15px, 
+
+}
+
+.catCardFooterText {
+  color:white;
+  font-size: 80%;
+  padding: 2px;
+  text-decoration: underline;
 
 }
