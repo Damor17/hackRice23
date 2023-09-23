@@ -10,12 +10,6 @@ function App() {
         bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20, Calories: 20 },
         nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }
       }
-      ,
-      nFacts : {
-        Carbs : 10,
-        Protein: 80,
-        Fat: 65,
-      }
 
     },
 
@@ -24,11 +18,6 @@ function App() {
         eggs : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20},
         bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20, Calories: 20  },
         nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }
-      },
-      nFacts : {
-        Carbs : '10',
-        Protein: '80',
-        Fat: '65',
       }
 
     },
@@ -37,12 +26,6 @@ function App() {
         eggs : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
         bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
         nuts: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 }}
-      ,
-      nFacts : {
-        Carbs : '10',
-        Protein: '80',
-        Fat: '65',
-      }
 
     },
     SNACKS: {
@@ -51,12 +34,6 @@ function App() {
         bread : {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20 },
         nuts: {grams: 30, Carbs: 30, Protein:80, Fat: 20 , Calories: 20 }
       },
-      nFacts : {
-        Carbs : '10',
-        Protein: '80',
-        Fat: '65',
-      }
-
     },
   }
 

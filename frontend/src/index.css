@@ -40,7 +40,6 @@ code {
   font-size: 20;
   display: flex;
   padding:5;
-  border-bottom: 2px solid white;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -48,7 +47,7 @@ code {
 
 .catHeaderText {
   color:white;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-size: 20px;
 
 }
@@ -56,7 +55,14 @@ code {
 .catHeaderTextCalories {
   color:white;
   font-size: 12px;
-  margin-bottom: 20px;
+
+
+}
+.catHeaderButtonDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -65,7 +71,6 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 5%;
 
 }
 
@@ -115,4 +120,29 @@ code {
   padding: 2px;
   text-decoration: underline;
 
+}
+
+.catHeaderButtonImage {
+  width:50px;
+  transition: transform 0.3s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.catHeaderButtonImage:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: transform 0.3s;
+}
+
+.catHeaderHolders {
+  width:100%;
+  height: 0;
+  border-bottom: 2px solid white;
+}
+
+.addFoodModal {
+  position: absolute;
+  left:40%;
+  top: 50%;
+  background-color: #9CBD97;
 }
