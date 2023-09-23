@@ -1,11 +1,11 @@
 import ItemInCard from "./itemInCard"
-import { useState } from "react"
 
-const CategoryCard = ({item, data, setData, isModal, setIsModal}) => {
+const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
+    if (mealData.length === 0) {
+        return <div>Loading...</div>;
+    }
 
-
-
-    const foodData = data[item].food
+    const foodData = mealData[item].food
     const listFood = Object.entries(foodData)
     const newNutriFood = {
         Carbs: 0,
@@ -14,7 +14,6 @@ const CategoryCard = ({item, data, setData, isModal, setIsModal}) => {
     }
 
     let calories = 0
-
 
     const name = item
 
@@ -51,14 +50,13 @@ const CategoryCard = ({item, data, setData, isModal, setIsModal}) => {
     
     }
 
-
-
     return (
         <div className="catCard">
             <div className="catHeader">
                 <p className="catHeaderText">{name}</p>
                 <p className="catHeaderTextCalories"> {calories} Calories</p>
             </div>
+
             <div className='catHeaderButtonDiv'>
                 <div className="catHeaderHolders">
                     
@@ -67,19 +65,18 @@ const CategoryCard = ({item, data, setData, isModal, setIsModal}) => {
                 <div className="catHeaderHolders">
                     
                 </div>
-
             </div>
-             <div className='catBody'>
+
+            <div className='catBody'>
                 {newNutriFoodData.map((item, index) => (
 
                     <ItemInCard key={index} type={item[0]} amount={item[1]} />
                     ))}
+            </div>
 
-        
-             </div>
-             <div className="catCardFooter">
-                <p className="catCardFooterText">See more Details...</p>
-             </div>
+            <div className="catCardFooter">
+                <p className="catCardFooterText">See more details...</p>
+            </div>
         </div>
     );
   }
