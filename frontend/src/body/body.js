@@ -8,19 +8,16 @@ const Body = ({mealData, setMealData}) => {
   let categories = ['BREAKFAST', 'LUNCH', 'DINNER', 'SNACKS']
     return (
       <>
-        {isModal && <AddFoodModal />}
+        {isModal ? (
+          <AddFoodModal isModal={isModal} setIsModal= {setIsModal} onClick={() =>setIsModal(!isModal)}/>
+        ): (
+          <div className="divbody">
+              {categories.map((item, index) => (
+                <CategoryCard key={index} item={item} data={data} setData={setData} isModal={isModal} setIsModal= {setIsModal} />
+                ))}
+          </div>
 
-        <div className="divbody">
-          {categories.map((item, index) => (
-            <CategoryCard
-              key={index}
-              item={item}
-              mealData={mealData}
-              isModal={isModal}
-              setIsModal={setIsModal}
-            />
-          ))}
-        </div>
+        )}
       </>
     
     );
