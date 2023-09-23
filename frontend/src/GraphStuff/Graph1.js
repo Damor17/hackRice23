@@ -120,13 +120,9 @@ const Graph1 = () => {
         name: 'Protein',
         type: 'line',
         stack: 'Total',
-        smooth: false,
-        lineStyle: {
-          width: 0,
-        },
-        showSymbol: false,
+        smooth: true, // Enable smoothing for a stacked area chart
         areaStyle: {
-          opacity: 0.8,
+          opacity: 0.4,
           color: 'rgba(255, 0, 0, 0.8)',
         },
         emphasis: {
@@ -138,13 +134,9 @@ const Graph1 = () => {
         name: 'Carbs',
         type: 'line',
         stack: 'Total',
-        smooth: false,
-        lineStyle: {
-          width: 0,
-        },
-        showSymbol: false,
+        smooth: true,
         areaStyle: {
-          opacity: 0.8,
+          opacity: 0.4,
           color: 'rgba(255, 255, 0, 0.8)',
         },
         emphasis: {
@@ -156,13 +148,9 @@ const Graph1 = () => {
         name: 'Fat',
         type: 'line',
         stack: 'Total',
-        smooth: false,
-        lineStyle: {
-          width: 0,
-        },
-        showSymbol: false,
+        smooth: true,
         areaStyle: {
-          opacity: 0.8,
+          opacity: 0.4,
           color: 'rgba(0, 255, 0, 0.8)',
         },
         emphasis: {
@@ -174,13 +162,9 @@ const Graph1 = () => {
         name: 'Other',
         type: 'line',
         stack: 'Total',
-        smooth: false,
-        lineStyle: {
-          width: 0,
-        },
-        showSymbol: false,
+        smooth: true,
         areaStyle: {
-          opacity: 0.8,
+          opacity: 0.4,
           color: 'rgba(0, 0, 255, 0.8)',
         },
         emphasis: {
@@ -191,9 +175,11 @@ const Graph1 = () => {
     ],
   };
 
-  return (<div style = {{ width: '600px', height: '400px' }}>
-    <ReactEcharts option={option} />
-  </div>);
-}
+  return (
+    <div style={{ width: '600px', height: '400px' }}>
+      <ReactEcharts option={option} />
+    </div>
+  );
+};
 
 export default Graph1;
