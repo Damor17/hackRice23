@@ -2,30 +2,24 @@ import CategoryCard from "./categoryCard";
 import { useState } from "react";
 import AddFoodModal from "./addFoodModal";
 
-const Body = ({data, setData}) => {
-
+const Body = ({mealData, setMealData}) => {
   const [isModal, setIsModal] = useState(false)
 
-
-
-
-  let categories = ['BREAKFEAST', 'LUNCH', 'DINNER', 'SNACKS']
+  let categories = ['BREAKFAST', 'LUNCH', 'DINNER', 'SNACKS']
     return (
       <>
-        {isModal ? (
-          <AddFoodModal />
-        ): (
-          <div>
+        {isModal && <AddFoodModal />}
 
-          </div>
-
-        )}
-
-
-      <div className="divbody">
-              {categories.map((item, index) => (
-                <CategoryCard key={index} item={item} data={data} setData={setData} isModal={isModal} setIsModal= {setIsModal} />
-                ))}
+        <div className="divbody">
+          {categories.map((item, index) => (
+            <CategoryCard
+              key={index}
+              item={item}
+              mealData={mealData}
+              isModal={isModal}
+              setIsModal={setIsModal}
+            />
+          ))}
         </div>
       </>
     

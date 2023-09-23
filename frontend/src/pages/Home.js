@@ -6,9 +6,11 @@ const Home = () => {
 
   return (
     <div className={HomeCSS["home-page"]}>
-      <p>personal calorie tracker</p>
-      <h1>TRACK RICE</h1>
-      <button onClick={() => navigate("/upload")}>your plates</button>
+      <div>
+        <p>personal calorie tracker</p>
+        <h1>TRACK RICE</h1>
+        <button onClick={() => navigate("/upload")}>your plates</button>
+      </div>
     </div>
   );
 }
