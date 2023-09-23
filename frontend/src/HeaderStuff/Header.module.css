@@ -22,10 +22,18 @@ header {
   margin-top: -6px;
 }
 
+.carbs {
+  margin-left: 18px;
+}
+
 .carbs-text {
   color: white;
-  margin-left: 18px;
   font-weight: normal;
+}
+
+.grams {
+  font-size: 12px;
+  color: white;
 }
 
 .vertical-break {
@@ -43,9 +51,12 @@ header {
 }
 
 .protein-text {
-  margin-left: 25px;
   color: white;
   font-weight: normal;
+}
+
+.protein, .fat {
+  margin-left: 25px;
 }
 
 .fat-icon {
@@ -53,7 +64,6 @@ header {
 }
 
 .fat-text {
-  margin-left: 25px;
   color: white;
   font-weight: normal;
 }
