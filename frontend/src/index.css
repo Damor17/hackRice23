@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -30,7 +33,7 @@ code {
 .catCard {
   margin-top: 5%;
   padding: 10px;
-  background-color: gray;
+  background-color:#666953;
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.4);
   min-width: 20%;
   max-width: 300px;
@@ -47,13 +50,15 @@ code {
 
 .catHeaderText {
   color:white;
+  margin-top: 25px;
   margin-bottom: 2px;
   font-size: 20px;
-
+  letter-spacing: 5px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .catHeaderTextCalories {
-  color:white;
+  color: #E9EDE3;
   font-size: 12px;
 
 
@@ -67,7 +72,7 @@ code {
 }
 
 .catBody {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,13 +89,12 @@ code {
 }
 
 .catItemTypeText {
-  color: darkgray;
+  color: #E9EDE3;
   font-size: 16px;
-
 }
 
 .catItemAmountText {
-  color: white;
+  color: #E9EDE3;
   font-size: 11px;
 
 
@@ -124,7 +128,9 @@ code {
 
 .catHeaderButtonImage {
   width:50px;
-  transition: transform 0.3s;
+  color: #E9EDE3;
+  font-size: 40px;
+  transition: transform 0.1s;
   margin-left: 5px;
   margin-right: 5px;
 }

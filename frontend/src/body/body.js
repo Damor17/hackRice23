@@ -4,6 +4,7 @@ import AddFoodModal from "./addFoodModal";
 import ManualAdd from "./manualAdd";
 import UploadAdd from "./uploadAdd";
 
+
 const Body = ({mealData, setMealData}) => {
   const [isModal, setIsModal] = useState(false)
 

@@ -1,4 +1,5 @@
 import ItemInCard from "./itemInCard"
+import { IoAddCircleOutline } from "react-icons/io5"
 
 const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
     if (mealData.length === 0) {
@@ -61,7 +62,7 @@ const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
                 <div className="catHeaderHolders">
                     
                 </div>
-                <img className="catHeaderButtonImage" src="./images/fish.png" onClick={() => addFood()}/>
+                <IoAddCircleOutline className="catHeaderButtonImage" onClick={() => addFood()}/>
                 <div className="catHeaderHolders">
                     
                 </div>
