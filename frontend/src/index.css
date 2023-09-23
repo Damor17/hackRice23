@@ -173,7 +173,7 @@ code {
 
 .exitIcon:hover {
   cursor: pointer;
-  
+
 }
 
 
@@ -241,3 +241,30 @@ code {
   opacity: 90%;
 
 } 
+
+.ManualAdd {
+
+}
+
+
+.ManualAdd{
+  position: absolute;
+  background-color: #666953;
+  left: 20%;
+  right: 20%;
+  padding: 10px;
+  top:20%;
+}
+
+.ManualAdd2{
+  display: flex;
+  flex-direction: column;
+  background-color: #9CBD97;
+  justify-content: space-between;
+  padding: 10px; 
+
+}
+
+.formItem {
+  
+}

@@ -1,17 +1,31 @@
 import { AiFillCaretLeft} from "react-icons/ai";
 
-const  AddFoodModal= ({isModal, setIsModal}) => {
+const  AddFoodModal= ({isModal, setIsModal, isManual, setIsManual, isUpload, setIsUpload}) => {
 
-    function updateFood () {
+    function updateFoodManual () {
+        setIsManual(true)
+        setIsModal(false)
+        setIsUpload(false)
+    }
 
+    function updateFoodUpload () {
+        setIsUpload(true)
+        setIsManual(false)
+        setIsModal(false)
+    }
+
+    function goBack() {
+        setIsManual(false)
+        setIsModal(false)
+        setIsUpload(false)
     }
 
 
     return (
-        <>
+        <> 
 
         <div className="exit">
-            <AiFillCaretLeft className="exitIcon" color="white" size={30} onClick={() =>setIsModal(!isModal)}/>
+            <AiFillCaretLeft className="exitIcon" color="white" size={30} onClick={() =>goBack()}/>
 
         </div>
         
@@ -20,7 +34,7 @@ const  AddFoodModal= ({isModal, setIsModal}) => {
 
             <div className="addFoodManual">
                 <div className="addFoodImageContainer">
-                    <img className="saladImageFr" src="./images/salad.jpg" onClick={() => updateFood()}/>
+                    <img className="saladImageFr" src="./images/salad.jpg" onClick={() => updateFoodManual()}/>
                 </div>
 
                 <div className="addFoodManualTextDiv">
@@ -34,7 +48,7 @@ const  AddFoodModal= ({isModal, setIsModal}) => {
             </div>
             <div className="addFoodUpload">
                 <div className="addFoodImageContainer">
-                    <img className="saladImageFr" src="./images/fruits.jpg" onClick={() => updateFood()}/>
+                    <img className="saladImageFr" src="./images/fruits.jpg" onClick={() => updateFoodUpload()}/>
                 </div>
 
                 <div className="addFoodUploadTextDiv">
