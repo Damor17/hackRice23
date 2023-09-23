@@ -13,7 +13,7 @@ const Body = ({mealData, setMealData}) => {
         ): (
           <div className="divbody">
               {categories.map((item, index) => (
-                <CategoryCard key={index} item={item} data={data} setData={setData} isModal={isModal} setIsModal= {setIsModal} />
+                <CategoryCard key={index} item={item} mealData={mealData} setMealData={setMealData} isModal={isModal} setIsModal= {setIsModal} />
                 ))}
           </div>
 

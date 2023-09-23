@@ -29,7 +29,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/upload" element={<Upload mealData={mealData} setMealData={setMealData} />}/>
-        <Route path="/upload" element={<Upload data={data} setData={setData} />}/>
         <Route path="/graphs" element={<Graphs />}/>
       </Routes>
     </div>
