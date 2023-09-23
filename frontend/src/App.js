@@ -37,9 +37,9 @@ function App() {
     SNACKS: {
       food: ['eggs', 'doubleoats'],
       nFacts : {
-        carbs : '10',
-        protein: '80',
-        fat: '65',
+        Carbs : '10',
+        Protein: '80',
+        Fat: '65',
       }
 
     },
