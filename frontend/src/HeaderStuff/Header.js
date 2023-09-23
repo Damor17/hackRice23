@@ -1,16 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import Circle from "./Circle";
 import HeaderCSS from "./Header.module.css"
 
 // COMPLETED
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const carbGrams = 0;
   const proteinGrams = 0;
   const fatGrams = 0;
 
   return (
     <header>
-      <h2 className={HeaderCSS["cal-tracker-txt"]}>CAL TRACKER</h2>
+      <h2 onClick={() => {navigate("/")}} className={HeaderCSS["cal-tracker-txt"]}>CAL TRACKER</h2>
 
       <div className={HeaderCSS["right-header"]}>
         <img className={HeaderCSS["wheat-icon"]} src="./images/wheat.png" alt="wheat"/>

@@ -1,6 +1,7 @@
-import Header from "./HeaderStuff/Header.js";
-import Body from "./body/body";
 import { useState } from "react";
+import Upload from "./pages/Upload.js";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home.js";
 
 function App() {
   const initialData = {
@@ -46,8 +47,10 @@ function App() {
   const [data, setData] = useState(initialData)
   return (
     <div className="App">
-      <Header />
-      <Body data={data} setData= {setData} />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/upload" element={<Upload data={data} setData={setData} />}/>
+      </Routes>
     </div>
   );
 }
