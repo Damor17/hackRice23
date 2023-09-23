@@ -1,104 +1,195 @@
-import React, { useEffect, useRef } from 'react';
-import * as echarts from 'echarts';
+import React, { useState } from 'react';
+import ReactECharts from 'echarts-for-react';
+import './StackedAreaChart.css';
 
-const GraphWithPieCharts = () => {
-  const chartRef = useRef(null);
+const StackedAreaChart = () => {
+  const [cumulative, setCumulative] = useState(false); // State to track the display mode
 
-  useEffect(() => {
-    // Initialize ECharts chart
-    const myChart = echarts.init(chartRef.current);
+  // Generate realistic data for 24 hours (unchanged)
+  const data = [
+    { hour: '12:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '1:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '2:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '3:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '4:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '5:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '6:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '7:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '8:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '9:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '10:00 AM', protein: 71, carbs: 240, fat: 130, other: 20 }, // Breakfast
+    { hour: '11:00 AM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '12:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '1:00 PM', protein: 154, carbs: 320, fat: 220, other: 107 }, // Lunch
+    { hour: '2:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '3:00 PM', protein: 0, carbs: 0, fat: 0, other: 20 }, // Snack
+    { hour: '4:00 PM', protein: 70, carbs: 50, fat: 0, other: 0 },
+    { hour: '5:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '6:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 }, // Dinner
+    { hour: '6:30 PM', protein: 145, carbs: 320, fat: 355, other: 60 },
+    { hour: '7:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '8:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '9:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+    { hour: '10:00 PM', protein: 120, carbs: 200, fat: 20, other: 0 }, // Late Snack
+    { hour: '11:00 PM', protein: 0, carbs: 0, fat: 0, other: 0 },
+  ];
 
-    // This example requires ECharts v5.4.0 or later
-    const cellSize = [80, 80];
-    const pieRadius = 30;
+  // Calculate Other calories as 5-10% of total calories during meal times (unchanged)
+  const mealTimes = ['Breakfast', 'Lunch', 'Dinner', 'Snack', 'Late Snack'];
 
-    function getVirtualData() {
-      const date = +echarts.time.parse('2017-02-01');
-      const end = +echarts.time.parse('2017-03-01');
-      const dayTime = 3600 * 24 * 1000;
-      const data = [];
-      for (let time = date; time < end; time += dayTime) {
-        data.push([
-          echarts.time.format(time, '{yyyy}-{MM}-{dd}', false),
-          Math.floor(Math.random() * 10000)
-        ]);
-      }
-      return data;
+  // Function to calculate cumulative data
+  const getCumulativeData = () => {
+    const cumulativeData = [];
+    let cumulativeProtein = 0;
+    let cumulativeCarbs = 0;
+    let cumulativeFat = 0;
+    let cumulativeOther = 0;
+
+    for (const item of data) {
+      cumulativeProtein += item.protein;
+      cumulativeCarbs += item.carbs;
+      cumulativeFat += item.fat;
+      cumulativeOther += item.other;
+
+      cumulativeData.push({
+        ...item,
+        protein: cumulativeProtein,
+        carbs: cumulativeCarbs,
+        fat: cumulativeFat,
+        other: cumulativeOther,
+      });
     }
-    const scatterData = getVirtualData();
-    const pieSeries = scatterData.map(function (item, index) {
-      return {
-        type: 'pie',
-        id: 'pie-' + index,
-        center: item[0],
-        radius: pieRadius,
-        coordinateSystem: 'calendar',
-        label: {
-          formatter: '{c}',
-          position: 'inside'
-        },
-        data: [
-          { name: 'Work', value: Math.round(Math.random() * 24) },
-          { name: 'Entertainment', value: Math.round(Math.random() * 24) },
-          { name: 'Sleep', value: Math.round(Math.random() * 24) }
-        ]
-      };
-    });
-    const option = {
-      tooltip: {},
-      legend: {
-        data: ['Work', 'Entertainment', 'Sleep'],
-        bottom: 20
+
+    return cumulativeData;
+  };
+
+  // Prepare the option for the chart
+  const option = {
+    title: {
+      text: 'Daily Calorie Intake',
+      x: 'center',
+    },
+    legend: {
+      data: ['Protein', 'Carbs', 'Fat', 'Other'],
+      x: 'right',
+    },
+    xAxis: {
+      type: 'category',
+      data: data.map(item => item.hour),
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Calories',
+      nameLocation: 'middle',
+      nameGap: 40,
+    },
+    tooltip: {
+      trigger: 'axis',
+      formatter: (params) => {
+        const time = params[0].axisValue;
+        let content = `${time}<br/>`;
+        params.forEach((param) => {
+          content += `${param.seriesName}: ${param.value} calories<br/>`;
+        });
+        return content;
       },
-      calendar: {
-        top: 'middle',
-        left: 'center',
-        orient: 'vertical',
-        cellSize: cellSize,
-        yearLabel: {
-          show: false,
-          fontSize: 30
-        },
-        dayLabel: {
-          margin: 20,
-          firstDay: 1,
-          nameMap: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        monthLabel: {
-          show: false
-        },
-        range: ['2017-02']
+    },
+    series: [
+      {
+        name: 'Protein',
+        type: 'line',
+        stack: 'total',
+        smooth: true,
+        areaStyle: {},
+        data: data.map(item => item.protein),
       },
+      {
+        name: 'Carbs',
+        type: 'line',
+        stack: 'total',
+        smooth: true,
+        areaStyle: {},
+        data: data.map(item => item.carbs),
+      },
+      {
+        name: 'Fat',
+        type: 'line',
+        stack: 'total',
+        smooth: true,
+        areaStyle: {},
+        data: data.map(item => item.fat),
+      },
+      {
+        name: 'Other',
+        type: 'line',
+        stack: 'total',
+        smooth: true,
+        areaStyle: {},
+        data: data.map(item => item.other),
+      },
+    ],
+  };
+
+  // Function to calculate cumulative option
+  const getCumulativeOption = (cumulativeData) => {
+    const cumulativeOption = {
+      ...option, // Use the same option configuration
       series: [
         {
-          id: 'label',
-          type: 'scatter',
-          coordinateSystem: 'calendar',
-          symbolSize: 0,
-          label: {
-            show: true,
-            formatter: function (params) {
-              return echarts.time.format(params.value[0], '{dd}', false);
-            },
-            offset: [-cellSize[0] / 2 + 10, -cellSize[1] / 2 + 10],
-            fontSize: 14
-          },
-          data: scatterData
+          name: 'Protein',
+          type: 'line',
+          stack: 'total',
+          smooth: true,
+          areaStyle: {},
+          data: cumulativeData.map(item => item.protein),
         },
-        ...pieSeries
-      ]
+        {
+          name: 'Carbs',
+          type: 'line',
+          stack: 'total',
+          smooth: true,
+          areaStyle: {},
+          data: cumulativeData.map(item => item.carbs),
+        },
+        {
+          name: 'Fat',
+          type: 'line',
+          stack: 'total',
+          smooth: true,
+          areaStyle: {},
+          data: cumulativeData.map(item => item.fat),
+        },
+        {
+          name: 'Other',
+          type: 'line',
+          stack: 'total',
+          smooth: true,
+          areaStyle: {},
+          data: cumulativeData.map(item => item.other),
+        },
+      ],
     };
+    return cumulativeOption;
+  };
 
-    // Set the option and render the chart
-    myChart.setOption(option);
+  // Function to toggle between daily and cumulative display
+  const toggleDisplay = () => {
+    setCumulative(!cumulative);
+  };
 
-    // Cleanup when unmounting
-    return () => {
-      myChart.dispose();
-    };
-  }, []);
-
-  return <div ref={chartRef} style={{ width: '100%', height: '500px' }} />;
+  return (
+    <div>
+      <div>
+        <button className="toggle-button" onClick={toggleDisplay}>
+          {cumulative ? 'Switch to Daily' : 'Switch to Cumulative'}
+        </button>
+      </div>
+      <ReactECharts
+        option={cumulative ? getCumulativeOption(getCumulativeData()) : option}
+        style={{ height: '400px' }}
+      />
+    </div>
+  );
 };
 
-export default GraphWithPieCharts;
+export default StackedAreaChart;
