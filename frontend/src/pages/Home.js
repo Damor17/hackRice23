@@ -19,6 +19,7 @@ const Home = () => {
           <h1 className={HomeCSS["rice"]}>RICE</h1>
         </div>
         <button className={HomeCSS["your-plates"]}onClick={() => navigate("/upload")}>your plates</button>
+        <button onClick={() => navigate("/graphs")}>Stats</button>
       </div>
     </div>
   );

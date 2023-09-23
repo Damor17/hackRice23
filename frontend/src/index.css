@@ -142,7 +142,129 @@ code {
 
 .addFoodModal {
   position: absolute;
-  left:40%;
-  top: 50%;
+  display: flex;
+  flex-direction: row;
   background-color: #9CBD97;
+  left: 20%;
+  right: 20%;
+  padding: 20px;
+  top:20%;
+  justify-content: space-between;
+
+}
+
+.exit {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top:18%;
+  z-index: 2;
+  background-color: #9CBD97;
+
+}
+
+.exitIcon {
+  color:white;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.exitIcon:hover {
+  cursor: pointer;
+
+}
+
+
+.addFoodManual{
+  
+  
+}
+
+.addFoodUpload {
+ 
+
+}
+
+.addFoodImageContainer {
+  width:300px;
+  height:500px;
+  overflow: hidden;
+
+}
+
+.saladImageFr {
+  width:100%;
+  height:100%;
+  object-fit: cover; 
+  transition: filter  3s;
+  transition: transform  1s;
+  position: relative;
+}
+
+.saladImageFr:hover {
+  filter: grayscale(100%) brightness(50%);
+  transform: scale(1.1) ;
+  transition: filter 3s;
+  transition: transform  1s;
+  cursor: pointer;
+  position: relative;
+}
+
+.addFoodManualText {
+  font-size: 18px;
+  color:#666953;
+  font-weight: 600;
+}
+
+.addFoodManualTextDiv {
+  position: absolute;
+  top:50%;
+  left: 12%;
+  padding: 2px;
+  background-color: #666953;
+  opacity: 90%;
+}
+
+.addFoodManualTextDiv2 {
+  background-color: #9CBD97;
+  padding:5px; 
+}
+
+.addFoodUploadTextDiv {
+  position: absolute;
+  top:50%;
+  right: 16%;
+  padding: 2px;
+  background-color: #666953;
+  opacity: 90%;
+
+} 
+
+.ManualAdd {
+
+}
+
+
+.ManualAdd{
+  position: absolute;
+  background-color: #666953;
+  left: 20%;
+  right: 20%;
+  padding: 10px;
+  top:20%;
+}
+
+.ManualAdd2{
+  display: flex;
+  flex-direction: column;
+  background-color: #9CBD97;
+  justify-content: space-between;
+  padding: 10px; 
+
+}
+
+.formItem {
+  
 }
