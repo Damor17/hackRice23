@@ -9,6 +9,7 @@ const Home = () => {
       <p>personal calorie tracker</p>
       <h1>TRACK RICE</h1>
       <button onClick={() => navigate("/upload")}>your plates</button>
+      <button onClick={() => navigate("/graphs")}>Stats</button>
     </div>
   );
 }
