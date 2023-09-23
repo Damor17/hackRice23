@@ -1,6 +1,9 @@
 import ItemInCard from "./itemInCard"
+import { useState } from "react"
 
-const CategoryCard = ({item, data, setData}) => {
+const CategoryCard = ({item, data, setData, isModal, setIsModal}) => {
+
+
 
     const foodData = data[item].food
     const listFood = Object.entries(foodData)
@@ -43,6 +46,11 @@ const CategoryCard = ({item, data, setData}) => {
 
     const newNutriFoodData = (Object.entries(newNutriFood))
 
+    function addFood () {
+        setIsModal(!isModal)
+    
+    }
+
 
 
     return (
@@ -51,13 +59,12 @@ const CategoryCard = ({item, data, setData}) => {
                 <p className="catHeaderText">{name}</p>
                 <p className="catHeaderTextCalories"> {calories} Calories</p>
             </div>
-            <div>
-                <div>
-                    ----
+            <div className='catHeaderButtonDiv'>
+                <div className="catHeaderHolders">
+                    
                 </div>
-                <img>
-                </img>
-                <div>
+                <img className="catHeaderButtonImage" src="./images/fish.png" onClick={() => addFood()}/>
+                <div className="catHeaderHolders">
                     
                 </div>
 
