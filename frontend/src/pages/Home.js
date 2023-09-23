@@ -8,7 +8,7 @@ const Home = () => {
     <div className={HomeCSS["home-page"]}>
       <p>personal calorie tracker</p>
       <h1>TRACK RICE</h1>
-      <button onClick={() => navigate("/upload")}>Plates</button>
+      <button onClick={() => navigate("/upload")}>your plates</button>
       <button onClick={() => navigate("/graphs")}>Stats</button>
     </div>
   );
