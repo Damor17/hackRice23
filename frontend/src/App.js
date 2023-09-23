@@ -1,8 +1,6 @@
-import Header from "./Header";
+import Header from "./HeaderStuff/Header.js";
 import Body from "./body/body";
 import { useState } from "react";
-
-
 
 function App() {
   const initialData = {
