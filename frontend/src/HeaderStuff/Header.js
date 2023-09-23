@@ -12,7 +12,7 @@ const Header = () => {
   const fatGrams = 0;
 
   return (
-    <header className="upload-header">
+    <header className={HeaderCSS["upload-header"]}>
       <h2 onClick={() => {navigate("/")}} className={HeaderCSS["cal-tracker-txt"]}>CAL TRACKER</h2>
 
       <div className={HeaderCSS["right-header"]}>
