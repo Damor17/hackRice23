@@ -1,0 +1,27 @@
+footer {
+  position: absolute;
+  background-color: #9CBD97;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: white;
+  margin-left: 40px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+footer p:hover {
+  text-decoration: underline;
+}
+
+.copyright-txt {
+  position: absolute;
+  right: 20px;
+}

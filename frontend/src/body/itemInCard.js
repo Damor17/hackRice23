@@ -1,8 +1,5 @@
-
-
 const  ItemInCard= ({type, amount}) => {
-
-    let imgpath
+    let imgpath;
 
     if (type ==='Carbs') {
         imgpath = "./images/wheat.png"
@@ -20,6 +17,7 @@ const  ItemInCard= ({type, amount}) => {
         <div>
             <img className="catIcon" src={imgpath}/>
         </div>
+
         <div className="catTypeNAmount">
             <p className="catItemTypeText">
                 {type}
@@ -27,9 +25,7 @@ const  ItemInCard= ({type, amount}) => {
             <p className="catItemAmountText">
                 {amount} g
             </p>
-
         </div>
-
       </div>
     );
   }

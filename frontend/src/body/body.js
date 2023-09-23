@@ -4,18 +4,15 @@ import AddFoodModal from "./addFoodModal";
 import ManualAdd from "./manualAdd";
 import UploadAdd from "./uploadAdd";
 
-const Body = ({data, setData}) => {
-
+const Body = ({mealData, setMealData}) => {
   const [isModal, setIsModal] = useState(false)
+
 
   const [isManual, setIsManual] = useState(false)
 
   const [isUpload, setIsUpload] = useState(false)
 
-
-
-
-  let categories = ['BREAKFEAST', 'LUNCH', 'DINNER', 'SNACKS']
+  let categories = ['BREAKFAST', 'LUNCH', 'DINNER', 'SNACKS']
     return (
       <>
         {isModal ? (
@@ -30,7 +27,7 @@ const Body = ({data, setData}) => {
         ) : (
           <div className="divbody">
               {categories.map((item, index) => (
-                <CategoryCard key={index} item={item} data={data} setData={setData} isModal={isModal} setIsModal= {setIsModal} />
+                <CategoryCard key={index} item={item} mealData={mealData} setMealData={setMealData} isModal={isModal} setIsModal= {setIsModal} />
                 ))}
           </div>
 
