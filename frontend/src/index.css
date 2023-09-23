@@ -66,8 +66,7 @@ header {
   margin-left: 25px;
   color: white;
   font-weight: normal;
-=======
-  /* idfk */
+
 }
 
 .divbody {
@@ -83,6 +82,8 @@ header {
   padding: 10px;
   background-color: gray;
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.4);
+  min-width: 20%;
+  max-width: 300px;
 }
 
 .catHeader {
@@ -102,6 +103,9 @@ header {
 
 .catBody {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 
@@ -109,6 +113,8 @@ header {
   display: flex;
   flex-direction: row;
   margin-bottom: 15%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .catItemTypeText {
@@ -121,5 +127,17 @@ header {
   color: white;
   font-size: 11px;
 
+
+}
+
+.catIcon {
+  width: 30px;
+  margin-top: -6px;
+}
+
+.catTypeNAmount {
+  display: flex;
+  flex-direction: column;
+  left:0;
 
 }
