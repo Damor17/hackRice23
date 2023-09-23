@@ -1,6 +1,8 @@
 import Circle from "./Circle";
 import HeaderCSS from "./Header.module.css"
 
+// COMPLETED
+
 const Header = () => {
   return (
     <header>
