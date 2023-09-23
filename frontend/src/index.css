@@ -22,6 +22,7 @@ code {
 header {
   background-color: #9CBD97;
   height: 100px;
+
   display: flex;
   align-items: center;
 }
@@ -65,4 +66,60 @@ header {
   margin-left: 25px;
   color: white;
   font-weight: normal;
+=======
+  /* idfk */
+}
+
+.divbody {
+  color:blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.catCard {
+  margin-top: 5%;
+  padding: 10px;
+  background-color: gray;
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.catHeader {
+  font-size: 20;
+  display: flex;
+  padding:5;
+  border-bottom: 2px solid white;
+  justify-content: space-around;
+}
+
+.catHeaderText {
+  color:white;
+  margin-bottom: 5px;
+  font-size: 20px;
+
+}
+
+.catBody {
+  padding: 10px;
+
+}
+
+.catItem {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15%;
+}
+
+.catItemTypeText {
+  color: darkgray;
+  font-size: 16px;
+
+}
+
+.catItemAmountText {
+  color: white;
+  font-size: 11px;
+
+
 }
