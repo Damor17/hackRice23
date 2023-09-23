@@ -20,9 +20,53 @@ code {
 }
 
 header {
-  background-color: #B2D185;
+  background-color: #9CBD97;
   height: 100px;
-  /* idfk */
+
+  display: flex;
+  align-items: center;
+}
+
+.wheat-icon {
+  width: 50px;
+  margin-top: -6px;
+}
+
+.carbs-text {
+  color: white;
+  margin-left: 18px;
+  font-weight: normal;
+}
+
+.vertical-break {
+  height: 50px;
+  background-color: white;
+  width: 2px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.fish-icon {
+  color: white;
+  width: 50px;
+  margin-top: -5px;
+}
+
+.protein-text {
+  margin-left: 25px;
+  color: white;
+  font-weight: normal;
+}
+
+.fat-icon {
+  width: 37px;
+}
+
+.fat-text {
+  margin-left: 25px;
+  color: white;
+  font-weight: normal;
+
 }
 
 .divbody {
@@ -75,5 +119,6 @@ header {
 .catItemAmountText {
   color: white;
   font-size: 11px;
+
 
 }
