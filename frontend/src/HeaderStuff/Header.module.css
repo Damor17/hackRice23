@@ -6,10 +6,11 @@
 }
 
 .cal-tracker-txt {
-  color: #666953;
+  color: #404232;
   margin-right: auto;
   margin-left: 50px;
   cursor: pointer;
+  letter-spacing: 8px;
 }
 
 .right-header {
