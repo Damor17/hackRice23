@@ -20,8 +20,8 @@ const Upload = () => {
           {!file && <UploadGoAway setFile={setFile} />}
           {file && <img className={UploadCSS["UploadImage"]} src={file} />}
         </div>
+        <button onClick={() => navigate("/manual-add")} className={UploadCSS["add-manually"]}>Or add items manually</button>
       </div>
-      <button className={UploadCSS["add-manually"]}>or add items manually</button>
     </div>
   );
 }

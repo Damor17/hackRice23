@@ -1,89 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
-.UploadAdd {
-    position: absolute;
-    background-color: white;
-    left: 10%;
-    right: 10%;
-    padding: 10px;
-    top: 13%;
-  }
-  
-  .UploadHeaderText {
-    color: #e9ede3;
-    margin-bottom: 20px;
-    margin-left: 375px;
-  }
-  
-  .UploadImgContainer{
-    width: 480px;
-    height: 480px;
-    border: 1px solid blue;
-  }
-  
-  .UploadHeader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .UploadImage {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .add-manually {
-    border: none;
-    background-color: white;
-    font-style: italic;
-    font-family: 'Lora', serif;
-    color: white;
-    cursor: pointer;
-  }
-
-  .add-manually:hover {
-    text-decoration: underline;
-  }
-  
 .upload-page {
   background-color: #404232;
   height: 100vh;
 }
 
 .UploadAdd {
-  position: absolute;
   background-color:#e9ede3;
-  left: 34%;
-  right: 33%;
+  width: 500px;
+  height: 500px;
   padding: 10px;
-  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 67px;
 }
 
-.UploadHeaderText {
-  color: #9CBD97;
-  margin-bottom: 40px;
-  margin-top: -20px;
-}
-
-.UploadImgContainer{
+.UploadImgContainer {
   width: 480px;
   height: 480px;
-  margin: auto;
   border: 3px solid #404232;
-}
-
-.cloche-icon {
-  width: 400px;
-  height: 400px;
-  opacity: 0.5;
-}
-
-.UploadImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .upload-away {
@@ -92,9 +27,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -20px;
+  justify-content: space-evenly;
+}
+
+.cloche-icon {
+  width: 320px;
+  height: 320px;
+  opacity: 0.5;
+}
+
+.UploadHeaderText {
+  color: #9CBD97;
 }
 
 .file-upload {
   margin-left: 90px;
+}
+
+.add-manually {
+  border: 1px solid #e9ede3;
+  font-style: italic;
+  font-family: 'Lora', serif;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 15px;
+  width: 500px;
+  margin-left: -10px;
+  background-color: transparent;
+}
+
+.add-manually:hover {
+  text-decoration: underline;
+}
+
+.UploadImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
