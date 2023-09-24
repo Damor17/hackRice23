@@ -15,15 +15,13 @@ const Body = ({ mealData, setMealData, setIsChanger, dayDate }) => {
 
   let categories = ['BREAKFAST', 'LUNCH', 'DINNER', 'SNACKS']
     return (
-      <>
+      <div className="body-page">
         {isModal ? (
           <AddFoodModal isModal={isModal} setIsModal= {setIsModal} isManual={isManual} setIsManual= {setIsManual} isUpload= {isUpload} setIsUpload= {setIsUpload} setIsChanger={setIsChanger}/>
         ): isManual ? (
-          <ManualAdd isManual={isManual} setIsManual= {setIsManual}/>
-          
-
+          <ManualAdd isManual={isManual} setIsManual= {setIsManual} setIsChanger={setIsChanger} />
         ): isUpload ? (
-          <UploadAdd isUpload= {isUpload} setIsUpload= {setIsUpload} />
+          <UploadAdd isUpload= {isUpload} setIsUpload= {setIsUpload} setIsChanger={setIsChanger} />
 
         ) : (
           <div className="divbody">
@@ -44,8 +42,7 @@ const Body = ({ mealData, setMealData, setIsChanger, dayDate }) => {
         )
         
         }
-      </>
-    
+      </div>
     );
   }
    

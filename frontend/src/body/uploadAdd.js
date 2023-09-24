@@ -2,7 +2,7 @@ import { useState } from "react";
 import {AiFillCaretDown} from 'react-icons/ai'
 
 
-const  UploadAdd= ({isUpload, setIsUpload}) => {
+const  UploadAdd= ({ isUpload, setIsUpload, setIsChanger }) => {
 
     const [file, setFile] = useState()
 
@@ -11,13 +11,17 @@ const  UploadAdd= ({isUpload, setIsUpload}) => {
         setFile(URL.createObjectURL(e.target.files[0]));
     }
 
+    const handleBackButton = () => {
+        setIsUpload(false);
+        setIsChanger(true);
+    }
 
     return (
         <div className="UploadAdd">
             <div className="UploadAdd2">
                 <div className="UploadHeader">
                     <h2 className="UploadHeaderText">Choose Image</h2>
-                    <AiFillCaretDown color="white" size={40} onClick={() => setIsUpload(false)}/>
+                    <AiFillCaretDown className="back-button" color="white" size={40} onClick={handleBackButton}/>
                 </div>
                
                 <input type="file" onChange={handleChange} />

@@ -24,11 +24,10 @@ code {
 }
 
 .divbody {
-  color:blue;
+  color: blue;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
 }
 
 .catCard {
@@ -44,7 +43,7 @@ code {
 .catHeader {
   font-size: 20;
   display: flex;
-  padding:5;
+  padding: 5;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -62,15 +61,13 @@ code {
 .catHeaderTextCalories {
   color: #E9EDE3;
   font-size: 12px;
-
-
 }
+
 .catHeaderButtonDiv {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
 
 .catBody {
@@ -78,7 +75,6 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .catItem {
@@ -117,7 +113,6 @@ code {
   flex-direction: column;
   left:50%;
   position: absolute;
-
 }
 
 .catCardFooter {
@@ -168,7 +163,6 @@ code {
   padding: 20px;
   top:20%;
   justify-content: space-between;
-
 }
 
 .exit {
@@ -178,7 +172,6 @@ code {
   top:20%;
   z-index: 2;
   background-color: #9CBD97;
-
 }
 
 .exitIcon {
@@ -186,7 +179,6 @@ code {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-
 }
 
 .exitIcon:hover {
@@ -194,22 +186,10 @@ code {
 
 }
 
-
-.addFoodManual{
-  
-  
-}
-
-.addFoodUpload {
- 
-
-}
-
 .addFoodImageContainer {
   width:300px;
   height:500px;
   overflow: hidden;
-
 }
 
 .saladImageFr {
@@ -260,13 +240,7 @@ code {
   background-color: #666953;
   opacity: 90%;
   border-radius: 20px;
-
-} 
-
-.ManualAdd {
-
 }
-
 
 .ManualAdd{
   border-radius: 20px;
@@ -285,7 +259,6 @@ code {
   background-color: #9CBD97;
   justify-content: space-between;
   padding: 10px; 
-
 }
 
 .formItem {
@@ -294,15 +267,11 @@ code {
   margin-right: 5px;
   margin-left: 5px;
   margin-bottom: 5px;
-  
-  
 }
 
 .labelAdd {
   color:white;
   font-size: 20px;
-
-
 }
 
 .exitModalDiv {
@@ -313,7 +282,6 @@ code {
 
 .addIconManual:hover {
   cursor: pointer;
-
 }
 
 .UploadAdd {
@@ -324,11 +292,9 @@ code {
   right: 20%;
   padding: 3px;
   top:20%;
-
 }
 
 .UploadAdd2 {
-
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -358,9 +324,18 @@ code {
   align-items: center;
 }
 
-
 .UploadImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.back-button {
+  cursor: pointer;
+}
+
+.body-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
