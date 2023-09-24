@@ -1,5 +1,6 @@
 const  ItemInCard= ({type, amount}) => {
     let imgpath;
+    let isFatIcon = false;
 
     if (type ==='Carbs') {
         imgpath = "./images/wheat.png"
@@ -9,13 +10,15 @@ const  ItemInCard= ({type, amount}) => {
     }
     if (type == 'Fat') {
         imgpath = "./images/fat.png"
+        isFatIcon = true;
     }
 
+    type = type.toUpperCase();
 
     return (
       <div className="catItem">
         <div>
-            <img className="catIcon" src={imgpath}/>
+            <img className={isFatIcon ? "catIcon fatIcon" : "catIcon"} src={imgpath}/>
         </div>
 
         <div className="catTypeNAmount">

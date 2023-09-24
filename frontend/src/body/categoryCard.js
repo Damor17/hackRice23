@@ -77,7 +77,7 @@ const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, d
 
             <div className="catCardFooter">
                 <p 
-                className="catCardFooterText">See more details...</p>
+                className="catCardFooterText">see more details...</p>
             </div>
         </div>
     );
