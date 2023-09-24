@@ -1,7 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+.UploadAdd {
+    position: absolute;
+    background-color: white;
+    left: 10%;
+    right: 10%;
+    padding: 10px;
+    top: 13%;
+  }
+  
+  .UploadHeaderText {
+    color: #e9ede3;
+    margin-bottom: 20px;
+    margin-left: 375px;
+  }
+  
+  .UploadImgContainer{
+    width: 480px;
+    height: 480px;
+    border: 1px solid blue;
+  }
+  
+  .UploadHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .UploadImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .add-manually {
+    border: none;
+    background-color: white;
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: white;
+    cursor: pointer;
+  }
+
+  .add-manually:hover {
+    text-decoration: underline;
+  }
+  
 .upload-page {
   background-color: #404232;
   height: 100vh;
 }
+
 .UploadAdd {
   position: absolute;
   background-color:#e9ede3;

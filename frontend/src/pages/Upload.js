@@ -21,6 +21,7 @@ const Upload = () => {
           {file && <img className={UploadCSS["UploadImage"]} src={file} />}
         </div>
       </div>
+      <button className={UploadCSS["add-manually"]}>or add items manually</button>
     </div>
   );
 }

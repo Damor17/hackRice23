@@ -2,7 +2,6 @@ import HomeCSS from "../Home.module.css";
 import { useNavigate } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -13,12 +12,12 @@ const Home = () => {
         <FiMenu className={HomeCSS["menu-icon"]} />
       </header>
       <div className={HomeCSS["main-text-container"]}>
-      <p className={HomeCSS["personal-calorie-tracker"]}>personal calorie tracker</p>
+        <p className={HomeCSS["personal-calorie-tracker"]}>personal calorie tracker</p>
         <div className={HomeCSS["track-rice"]}>
           <h1 className={HomeCSS["track"]}>TRACK</h1>
           <h1 className={HomeCSS["rice"]}>RICE</h1>
         </div>
-        <button className={HomeCSS["your-plates"]}onClick={() => navigate("/meals-page")}>your plates</button>
+        <button className={HomeCSS["your-plates"]} onClick={() => navigate("/meals-page")}>your plates</button>
       </div>
     </div>
   );
