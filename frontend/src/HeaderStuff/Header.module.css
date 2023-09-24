@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
 .upload-header {
   background-color: #9CBD97;
   height: 100px;
@@ -7,10 +9,15 @@
 
 .cal-tracker-txt {
   color: #404232;
-  margin-right: auto;
-  margin-left: 50px;
   cursor: pointer;
   letter-spacing: 8px;
+}
+
+.left-header {
+  margin-right: auto;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .right-header {
@@ -36,6 +43,10 @@
 .grams {
   font-size: 12px;
   color: white;
+}
+
+.vertical-break:first-of-type {
+  background-color: #404232;
 }
 
 .vertical-break {
@@ -93,4 +104,15 @@
 
 .circle-cals-text {
   font-size: 10px;
+}
+
+.view-stats-txt {
+  font-family: lora;
+  font-weight: normal;
+  color: #404232;
+  cursor: pointer;
+}
+
+.view-stats-txt:hover {
+  text-decoration: underline;
 }
