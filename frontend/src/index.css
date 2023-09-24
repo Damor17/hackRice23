@@ -220,8 +220,8 @@ code {
 
 .addFoodManualText {
   font-size: 18px;
-  color:#666953;
-  font-weight: 600;
+  color: white;
+  font-weight: 400;
 }
 
 .addFoodManualTextDiv {
@@ -231,11 +231,13 @@ code {
   padding: 2px;
   background-color: #666953;
   opacity: 90%;
+  border-radius: 20px;
 }
 
 .addFoodManualTextDiv2 {
   background-color: #9CBD97;
   padding:5px; 
+  border-radius: 20px;
 }
 
 .addFoodUploadTextDiv {
@@ -245,6 +247,7 @@ code {
   padding: 2px;
   background-color: #666953;
   opacity: 90%;
+  border-radius: 20px;
 
 } 
 
@@ -254,15 +257,17 @@ code {
 
 
 .ManualAdd{
+  border-radius: 20px;
   position: absolute;
   background-color: #666953;
   left: 20%;
   right: 20%;
-  padding: 10px;
+  padding: 3px;
   top:20%;
 }
 
 .ManualAdd2{
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   background-color: #9CBD97;
@@ -272,5 +277,78 @@ code {
 }
 
 .formItem {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
   
+  
+}
+
+.labelAdd {
+  color:white;
+  font-size: 20px;
+
+
+}
+
+.exitModalDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.addIconManual:hover {
+  cursor: pointer;
+
+}
+
+.UploadAdd {
+  border-radius: 20px;
+  position: absolute;
+  background-color: #9CBD97;
+  left: 20%;
+  right: 20%;
+  padding: 3px;
+  top:20%;
+
+}
+
+.UploadAdd2 {
+
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #666953;
+  justify-content: space-between;
+  padding: 10px; 
+
+}
+
+.UploadHeaderText {
+  color:white;
+  margin-bottom: 20px;
+
+}
+
+.UploadImgContainer{
+  width: 400px;
+  height: 480px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.UploadHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.UploadImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
