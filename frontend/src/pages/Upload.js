@@ -1,6 +1,10 @@
 import { useState } from "react";
-import {AiFillCaretDown} from 'react-icons/ai'
 import UploadCSS from "../UploadStuff/Upload.module.css"
+import UploadGoAway from "../UploadStuff/UploadGoAway";
+import HomeCSS from "../Home.module.css";
+import { useNavigate } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 const Upload = () => {
   const [file, setFile] = useState()
@@ -15,6 +19,7 @@ const Upload = () => {
         <h2 style={{cursor: "pointer"}} onClick={() => navigate("/")}>TRACK RICE</h2>
         <FiMenu className={HomeCSS["menu-icon"]} />
       </header>
+      <AiFillCloseSquare className={UploadCSS["x-btn"]} onClick={() => navigate("/meals-page")} />
       <div className={UploadCSS["UploadAdd"]}>
         <div className={UploadCSS["UploadImgContainer"]}>
           {!file && <UploadGoAway setFile={setFile} />}
