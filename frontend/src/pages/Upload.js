@@ -1,4 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {AiFillCaretDown} from 'react-icons/ai'
+>>>>>>> 333c3eb (changing buttons)
 import UploadCSS from "../UploadStuff/Upload.module.css"
 import UploadGoAway from "../UploadStuff/UploadGoAway";
 import HomeCSS from "../Home.module.css";
@@ -8,6 +13,20 @@ import { FiMenu } from "react-icons/fi";
 const Upload = () => {
   const navigate = useNavigate();
   const [file, setFile] = useState()
+=======
+import { useNavigate } from "react-router-dom";
+import DayChanger from "../FooterStuff/DayChanger";
+import Footer from "../FooterStuff/Footer";
+import Header from "../HeaderStuff/Header";
+import Body from "../body/body";
+
+const Upload = ({ mealData, setMealData }) => {
+  const navigate = useNavigate();
+  const date = new Date();
+  const dayOfWeek = date.getDay();
+  const dayOfDate = date.getDate();
+  const currMonth = date.getMonth();
+>>>>>>> 1eb7d38 (changing buttons)
 
   function handleChange(e) {
       setFile(URL.createObjectURL(e.target.files[0]));
