@@ -1,0 +1,34 @@
+.UploadAdd {
+    position: absolute;
+    background-color: white;
+    left: 10%;
+    right: 10%;
+    padding: 10px;
+    top: 13%;
+  }
+  
+  .UploadHeaderText {
+    color: #e9ede3;
+    margin-bottom: 20px;
+    margin-left: 375px;
+  }
+  
+  .UploadImgContainer{
+    width: 480px;
+    height: 480px;
+    border: 1px solid blue;
+  }
+  
+  .UploadHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .UploadImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
