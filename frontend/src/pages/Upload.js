@@ -13,19 +13,26 @@ const Upload = ({ mealData, setMealData }) => {
   const [dayWeek, setDayWeek] = useState(dayOfWeek);
   const [dayDate, setDayDate] = useState(dayOfDate);
   const [month, setMonth] = useState(currMonth);
+  const [isChanger, setIsChanger] = useState(true);
 
   return (
     <div>
       <Header />
-      <Body mealData={mealData} setmealData= {setMealData} />
-      <DayChanger
+      <Body
+        mealData={mealData}
+        setmealData={setMealData}
+        isChanger={isChanger}
+        setIsChanger={setIsChanger}
+        dayDate={dayDate}
+      />
+      {isChanger && <DayChanger
         dayWeek={dayWeek}
         setDayWeek={setDayWeek}
         dayDate={dayDate}
         setDayDate={setDayDate}
         month={month}
         setMonth={setMonth}
-      />
+      />}
       <Footer />
     </div>
   );

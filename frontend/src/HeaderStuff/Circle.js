@@ -2,7 +2,7 @@ import HeaderCSS from "./Header.module.css"
 
 const Circle = () => {
   const goal = 2000;
-  const calCount = 1350;
+  const calCount = 1831;
 
   const transparentDeg = ((goal - calCount) / goal) * 360;
   const filledDeg = (calCount / goal) * 360;

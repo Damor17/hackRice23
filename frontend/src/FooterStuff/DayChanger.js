@@ -14,8 +14,11 @@ const DayChanger = ({ dayWeek, setDayWeek, dayDate, setDayDate, month, setMonth}
       dayWeek === 0 ? setDayWeek(6) : setDayWeek(dayWeek - 1);
       setDayDate(dayDate - 1);
     } else {
-      dayWeek === 6 ? setDayWeek(0) : setDayWeek(dayWeek + 1);
-      setDayDate(dayDate + 1);
+      const date = new Date();
+      if (dayDate + 1 <= date.getDate()) {
+        dayWeek === 6 ? setDayWeek(0) : setDayWeek(dayWeek + 1);
+        setDayDate(dayDate + 1);
+      }
     }
   }
 

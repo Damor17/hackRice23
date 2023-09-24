@@ -1,102 +1,308 @@
 {
-  "meals": {
-    "BREAKFAST": {
-      "food": {
-        "eggs": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "bread": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "nuts": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
+  "days": {
+    "today": {
+      "BREAKFAST": {
+        "food": {
+          "eggs": {
+            "grams": 61,
+            "Carbs": 1,
+            "Protein": 6,
+            "Fat": 7,
+            "Calories": 91
+          },
+          "bread": {
+            "grams": 25,
+            "Carbs": 13,
+            "Protein": 2,
+            "Fat": 1,
+            "Calories": 67
+          },
+          "nuts": {
+            "grams": 28,
+            "Carbs": 9,
+            "Protein": 5,
+            "Fat": 12,
+            "Calories": 157
+          }
+        }
+      },
+      "LUNCH": {
+        "food": {
+          "pbjSandwich": {
+            "grams": 58,
+            "Carbs": 28,
+            "Protein": 6,
+            "Fat": 9,
+            "Calories": 210
+          },
+          "broccoli": {
+            "grams": 44,
+            "Carbs": 3,
+            "Protein": 1,
+            "Fat": 0,
+            "Calories": 15
+          },
+          "chips": {
+            "grams": 28,
+            "Carbs": 16,
+            "Protein": 2,
+            "Fat": 10,
+            "Calories": 150
+          }
+        }
+      },
+      "DINNER": {
+        "food": {
+          "celery": {
+            "grams": 10,
+            "Carbs": 3,
+            "Protein": 1,
+            "Fat": 0,
+            "Calories": -5
+          },
+          "mashedPotatoes": {
+            "grams": 242,
+            "Carbs": 35,
+            "Protein": 4,
+            "Fat": 7,
+            "Calories": 214
+          },
+          "macCheese": {
+            "grams": 189,
+            "Carbs": 44,
+            "Protein": 13,
+            "Fat": 9,
+            "Calories": 310
+          }
+        }
+      },
+      "SNACKS": {
+        "food": {
+          "fruitSnacks": {
+            "grams": 25,
+            "Carbs": 19,
+            "Protein": 1,
+            "Fat": 0,
+            "Calories": 80
+          },
+          "beefJerky": {
+            "grams": 237,
+            "Carbs": 10,
+            "Protein": 30,
+            "Fat": 23,
+            "Calories": 369
+          },
+          "trailMix": {
+            "grams": 59,
+            "Carbs": 17,
+            "Protein": 5,
+            "Fat": 11,
+            "Calories": 173
+          }
         }
       }
     },
-    "LUNCH": {
-      "food": {
-        "eggs": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "bread": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "nuts": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
+    "yesterday": {
+      "BREAKFAST": {
+        "food": {
+          "eggs": {
+            "grams": 61,
+            "Carbs": 1,
+            "Protein": 6,
+            "Fat": 7,
+            "Calories": 91
+          },
+          "bacon": {
+            "grams": 34,
+            "Carbs": 1,
+            "Protein": 12,
+            "Fat": 12,
+            "Calories": 161
+          },
+          "nuts": {
+            "grams": 28,
+            "Carbs": 9,
+            "Protein": 5,
+            "Fat": 12,
+            "Calories": 157
+          }
+        }
+      },
+      "LUNCH": {
+        "food": {
+          "pbjSandwich": {
+            "grams": 58,
+            "Carbs": 28,
+            "Protein": 6,
+            "Fat": 9,
+            "Calories": 210
+          },
+          "broccoli": {
+            "grams": 44,
+            "Carbs": 3,
+            "Protein": 1,
+            "Fat": 0,
+            "Calories": 15
+          },
+          "salmon": {
+            "grams": 198,
+            "Carbs": 0,
+            "Protein": 40,
+            "Fat": 27,
+            "Calories": 412
+          }
+        }
+      },
+      "DINNER": {
+        "food": {
+          "ramen": {
+            "grams": 43,
+            "Carbs": 27,
+            "Protein": 4,
+            "Fat": 7,
+            "Calories": 188
+          },
+          "mashedPotatoes": {
+            "grams": 242,
+            "Carbs": 35,
+            "Protein": 4,
+            "Fat": 7,
+            "Calories": 214
+          },
+          "macCheese": {
+            "grams": 189,
+            "Carbs": 44,
+            "Protein": 13,
+            "Fat": 9,
+            "Calories": 310
+          }
+        }
+      },
+      "SNACKS": {
+        "food": {
+          "apple": {
+            "grams": 182,
+            "Carbs": 25,
+            "Protein": 2,
+            "Fat": 0,
+            "Calories": 95
+          },
+          "beefJerky": {
+            "grams": 237,
+            "Carbs": 10,
+            "Protein": 30,
+            "Fat": 23,
+            "Calories": 369
+          },
+          "trailMix": {
+            "grams": 59,
+            "Carbs": 17,
+            "Protein": 5,
+            "Fat": 11,
+            "Calories": 173
+          }
         }
       }
     },
-    "DINNER": {
-      "food": {
-        "eggs": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "bread": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "nuts": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
+    "twoDays": {
+      "BREAKFAST": {
+        "food": {
+          "eggs": {
+            "grams": 61,
+            "Carbs": 1,
+            "Protein": 6,
+            "Fat": 7,
+            "Calories": 91
+          },
+          "bread": {
+            "grams": 25,
+            "Carbs": 13,
+            "Protein": 2,
+            "Fat": 1,
+            "Calories": 67
+          },
+          "hashbrowns": {
+            "grams": 144,
+            "Carbs": 46,
+            "Protein": 4,
+            "Fat": 31,
+            "Calories": 470
+          }
         }
-      }
-    },
-    "SNACKS": {
-      "food": {
-        "eggs": {
-          "grams": 100,
-          "Carbs": 100,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 300
-        },
-        "bread": {
-          "grams": 10,
-          "Carbs": 10,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
-        },
-        "nuts": {
-          "grams": 30,
-          "Carbs": 30,
-          "Protein": 80,
-          "Fat": 20,
-          "Calories": 20
+      },
+      "LUNCH": {
+        "food": {
+          "hotDog": {
+            "grams": 52,
+            "Carbs": 2,
+            "Protein": 5,
+            "Fat": 13,
+            "Calories": 151
+          },
+          "broccoli": {
+            "grams": 44,
+            "Carbs": 3,
+            "Protein": 1,
+            "Fat": 0,
+            "Calories": 15
+          },
+          "chips": {
+            "grams": 28,
+            "Carbs": 16,
+            "Protein": 2,
+            "Fat": 10,
+            "Calories": 150
+          }
+        }
+      },
+      "DINNER": {
+        "food": {
+          "steak": {
+            "grams": 251,
+            "Carbs": 0,
+            "Protein": 62,
+            "Fat": 48,
+            "Calories": 679
+          },
+          "burger": {
+            "grams": 171,
+            "Carbs": 38,
+            "Protein": 24,
+            "Fat": 20,
+            "Calories": 417
+          },
+          "macCheese": {
+            "grams": 189,
+            "Carbs": 44,
+            "Protein": 13,
+            "Fat": 9,
+            "Calories": 310
+          }
+        }
+      },
+      "SNACKS": {
+        "food": {
+          "apple": {
+            "grams": 182,
+            "Carbs": 25,
+            "Protein": 2,
+            "Fat": 0,
+            "Calories": 95
+          },
+          "beefJerky": {
+            "grams": 237,
+            "Carbs": 10,
+            "Protein": 30,
+            "Fat": 23,
+            "Calories": 369
+          },
+          "tiramisu": {
+            "grams": 145,
+            "Carbs": 43,
+            "Protein": 9,
+            "Fat": 35,
+            "Calories": 513
+          }
         }
       }
     }

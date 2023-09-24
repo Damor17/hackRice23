@@ -1,6 +1,6 @@
 import { AiFillCaretLeft} from "react-icons/ai";
 
-const  AddFoodModal= ({isModal, setIsModal, isManual, setIsManual, isUpload, setIsUpload}) => {
+const  AddFoodModal= ({ isModal, setIsModal, isManual, setIsManual, isUpload, setIsUpload, setIsChanger }) => {
 
     function updateFoodManual () {
         setIsManual(true)
@@ -18,6 +18,7 @@ const  AddFoodModal= ({isModal, setIsModal, isManual, setIsManual, isUpload, set
         setIsManual(false)
         setIsModal(false)
         setIsUpload(false)
+        setIsChanger(true);
     }
 
 
