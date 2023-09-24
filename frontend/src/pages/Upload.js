@@ -1,4 +1,5 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import UploadCSS from "../UploadStuff/Upload.module.css"
 import UploadGoAway from "../UploadStuff/UploadGoAway";
 import HomeCSS from "../Home.module.css";
@@ -15,6 +16,13 @@ const Upload = ({ mealData, setMealData }) => {
   const dayOfWeek = date.getDay();
   const dayOfDate = date.getDate();
   const currMonth = date.getMonth();
+=======
+import {AiFillCaretDown} from 'react-icons/ai'
+import UploadCSS from "../UploadStuff/Upload.module.css"
+
+const Upload = () => {
+  const [file, setFile] = useState()
+>>>>>>> d67b447 (bruh)
 
   function handleChange(e) {
       setFile(URL.createObjectURL(e.target.files[0]));
