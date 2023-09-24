@@ -2,6 +2,7 @@ import HomeCSS from "../Home.module.css";
 import { useNavigate } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 
+// make change
 
 const Home = () => {
   const navigate = useNavigate();
