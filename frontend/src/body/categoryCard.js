@@ -2,12 +2,23 @@ import ItemInCard from "./itemInCard"
 import { IoAddCircleOutline } from "react-icons/io5"
 
 
-const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
+const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, dayDate }) => {
+
     if (mealData.length === 0) {
         return <div style={{marginTop: "30px"}}>Loading...</div>;
     }
 
-    const foodData = mealData[item].food
+    const date = new Date();
+    const today = date.getDate();
+    let dayRelative = "today";
+
+    if (today - dayDate === 1) {
+        dayRelative = "yesterday";
+    } if (today - dayDate === 2) {
+        dayRelative = "twoDays"
+    }
+
+    const foodData = mealData[dayRelative][mealType].food;
     const listFood = Object.entries(foodData)
     const newNutriFood = {
         Carbs: 0,
@@ -17,31 +28,19 @@ const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
 
     let calories = 0
 
-    const name = item
-
-    for (item in Object.entries(foodData)) {
-        const food = listFood[item]
-        const foodInfo = food[1]
+    for (const foodEntryArr of listFood) {
+        const foodInfo = foodEntryArr[1]
         const foodKeys = (Object.entries(foodInfo))
-        for (item in foodKeys) {
-            if (foodKeys[item][0] == 'Carbs') {
-                newNutriFood['Carbs'] += foodKeys[item][1]
-
+        for (const nutrientArr of foodKeys) {
+            if (nutrientArr[0] === 'Carbs') {
+                newNutriFood['Carbs'] += nutrientArr[1]
+            } if (nutrientArr[0] === 'Protein') {
+                newNutriFood['Protein'] += nutrientArr[1]
+            } if (nutrientArr[0] === 'Fat') {
+                newNutriFood['Fat'] += nutrientArr[1]
+            } if (nutrientArr[0] === 'Calories') {
+                calories += nutrientArr[1]
             }
-            if (foodKeys[item][0]== 'Protein') {
-                newNutriFood['Protein'] += foodKeys[item][1]
-
-            }
-            if (foodKeys[item][0] == 'Fat') {
-                newNutriFood['Fat'] += foodKeys[item][1]
-
-            }
-            console.log(foodKeys[item][0] )
-            if (foodKeys[item][0] == 'Calories') {
-                calories += foodKeys[item][1]
-
-            }
-            
         }
     }
 
@@ -49,13 +48,13 @@ const CategoryCard = ({item, mealData, isModal, setIsModal}) => {
 
     function addFood () {
         setIsModal(!isModal)
-    
+        setIsChanger(false);
     }
 
     return (
         <div className="catCard">
             <div className="catHeader">
-                <p className="catHeaderText">{name}</p>
+                <p className="catHeaderText">{mealType}</p>
                 <p className="catHeaderTextCalories"> {calories} Calories</p>
             </div>
 

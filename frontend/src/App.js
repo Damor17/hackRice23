@@ -6,7 +6,7 @@ import Graphs from "./pages/Graphs.js";
 
 function App() {
   const [mealData, setMealData] = useState([]);
-  const API_URL = "http://localhost:3500/meals";
+  const API_URL = "http://localhost:3500/days";
 
   useEffect(() => {
     const fetchMealData = async () => {

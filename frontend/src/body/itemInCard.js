@@ -23,7 +23,7 @@ const  ItemInCard= ({type, amount}) => {
                 {type}
             </p>
             <p className="catItemAmountText">
-                {amount} g
+                {amount}g
             </p>
         </div>
       </div>
