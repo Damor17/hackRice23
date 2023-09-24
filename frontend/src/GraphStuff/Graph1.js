@@ -120,7 +120,7 @@ const Graph1 = ({ onDayClick }) => {
         name: 'Protein',
         type: 'line',
         stack: 'Total',
-        smooth: true, // Enable smoothing for a stacked area chart
+        smooth: true,
         areaStyle: {
           opacity: 0.4,
           color: 'rgba(255, 0, 0, 0.8)',

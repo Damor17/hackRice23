@@ -5,19 +5,11 @@
   height: 100vh;
 }
 
-.UploadAdd {
-  background-color:#e9ede3;
-  width: 500px;
-  height: 500px;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-}
+/* Styles for the container when not confirmed */
 
 .UploadImgContainer {
-  width: 480px;
-  height: 480px;
+  width: 380px;
+  height: 380px;
   border: 3px solid #404232;
 }
 
@@ -34,6 +26,14 @@
   width: 320px;
   height: 320px;
   opacity: 0.5;
+}
+
+.add-manually-container {
+  text-align: center; /* Center the button horizontally */
+  margin-top: 10px; /* Adjust the margin as needed to control the vertical position */
+  width: 100%; /* Make the container take full width */
+  margin-left: 1000px;
+  display: block; /* Display as a block-level element to ensure it appears below */
 }
 
 .UploadHeaderText {
@@ -55,7 +55,7 @@
   padding: 10px;
   margin-top: 15px;
   width: 500px;
-  margin-left: -10px;
+  margin-left: 470px;
   background-color: transparent;
 }
 
@@ -76,4 +76,101 @@
   top: 85px;
   font-size: 40px;
   cursor: pointer;
+}
+
+/* Styles for the container when confirmed */
+.confirm-button {
+  background-color: #71966D; /* Green background color */
+  color: #fff; /* White text color */
+  padding: 5px 10px; /* Padding around the text */
+  border: 2px solid #000000; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.upload-text-container {
+  max-width: 20%; /* Adjust the maximum width as needed */
+  margin: 218px; /* Center the text horizontally */
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; /* Adjust the minimum height as needed */
+}
+
+.confirmed-content {
+  flex: 1; /* Allow the container to grow */
+  margin-left: 40px; /* Add some space between the food options and image */
+}
+
+.food-options-side {
+  flex: 1;
+  margin-left: 20px; /* Add spacing between the food options and image */
+}
+
+.food-options-container {
+  background-color: #71966D; /* Dark background color */
+  color: white; /* White text color */
+  padding: 10px; /* Add padding to the container */
+  border-radius: 5px;
+  flex: 1; /* Allow the container to grow */
+  max-height: 300px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add scroll when content exceeds max-height */
+  margin-left: -100px;
+  width: 200px;
+}
+/* Styles for the food options list when confirmed */
+.food-options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.food-options-list li {
+  margin-bottom: 10px; /* Add spacing between food options */
+}
+
+/* Styles for the image container when confirmed */
+.UploadImgContainer.confirmed {
+  flex: 1; /* Allow the container to grow */
+  margin-left: 40px; /* Add some space between the food options and image */
+}
+
+
+
+.UploadAdd {
+  background-color: #e9ede3;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmed-content,
+.food-options-container {
+  margin-top: 20px; /* Add some space between them */
+}
+
+@media (min-width: 768px) {
+  .upload-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Add this line to align items to the top */
+  }
 }
