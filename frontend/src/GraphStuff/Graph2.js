@@ -178,7 +178,8 @@ const StackedAreaChart = () => {
   };
 
   return (
-    <div>
+    <div className="chart-container">
+      <div className="green-overlay" style={{ display: cumulative ? 'block' : 'none' }}></div>
       <div>
         <button className="toggle-button" onClick={toggleDisplay}>
           {cumulative ? 'Switch to Daily' : 'Switch to Cumulative'}
