@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DayChanger from "../FooterStuff/DayChanger";
 import Footer from "../FooterStuff/Footer";
 import Header from "../HeaderStuff/Header";
 import Body from "../body/body";
 
 const Upload = ({ mealData, setMealData }) => {
+  const navigate = useNavigate();
   const date = new Date();
   const dayOfWeek = date.getDay();
   const dayOfDate = date.getDate();
