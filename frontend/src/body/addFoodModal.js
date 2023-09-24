@@ -61,11 +61,6 @@ const  AddFoodModal= ({ isModal, setIsModal, isManual, setIsManual, isUpload, se
                 </div>
 
             </div>
-
-
-        
-    
-
       </div>
       </>
     );

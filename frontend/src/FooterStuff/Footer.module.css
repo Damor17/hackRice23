@@ -10,6 +10,10 @@ footer {
   justify-content: center;
 }
 
+.privacy-text {
+  margin-left: -20px;
+}
+
 footer p {
   color: white;
   margin-left: 40px;

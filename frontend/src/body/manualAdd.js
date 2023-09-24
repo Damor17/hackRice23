@@ -3,59 +3,49 @@ import {AiFillCaretLeft} from 'react-icons/ai'
 
 import {AiFillPlusCircle} from "react-icons/ai"
 
-const  ManualAdd= ({isManual, setIsManual}) => {
+const  ManualAdd= ({ isManual, setIsManual, setIsChanger }) => {
     const initialFormInside = {
         grams: 0, 
         Carbs: 0, 
         Protein:0, 
         Fat: 0 , 
         Calories: 0,
-
     }
 
-    const initialForm = {
-
+    const handleBackClick = () => {
+        setIsManual(false);
+        setIsChanger(true);
     }
+
+    const initialForm = {};
 
     const [inputValues, setInputValues] = useState({});
-
-
  
     function handleInputChange(fieldName, value) {
         setInputValues({ ...inputValues, [fieldName]: value });
-
-  };
+    };
 
   function addItem() {
     const updatedObject = { ...inputValues };
-    let food = updatedObject.Food
-    delete updatedObject[food]
-    setInputValues(updatedObject)
-    initialForm[food] = inputValues
+    let food = updatedObject.Food;
+    delete updatedObject[food];
+    setInputValues(updatedObject);
+    initialForm[food] = inputValues;
     //ADD TO DATABASE
 
-
-    setInputValues({})
-    setIsManual(false)
-
-
+    setInputValues({});
+    setIsManual(false);
   }
 
     const blanks = ['Food', 'Grams', 'Carbs', 'Protein', 'Fat', 'Calories']
 
-    
-
-
     return (
       <div className="ManualAdd">
         <div>
-            <AiFillCaretLeft color="white" size={30} onClick={() => setIsManual(false)}/>
-
+            <AiFillCaretLeft className="back-button" color="white" size={30} onClick={handleBackClick}/>
         </div>
         <div className="ManualAdd2">
             {blanks.map((item, index) => (
-
-
                 item == 'Food' ? (
                     <div className="formItem" key={index}>
                         <label htmlFor="text-input" className="labelAdd">{item}:</label>
@@ -65,9 +55,7 @@ const  ManualAdd= ({isManual, setIsManual}) => {
                                 value={inputValues[item] || ''}
                                 onChange={(e) => handleInputChange(item, e.target.value)}
                         />
-                
                     </div>
-
                 ) : <div className="formItem" key={index}>
                         <label htmlFor="numeric-input" className="labelAdd">{item}:</label>
                         <input
@@ -78,8 +66,6 @@ const  ManualAdd= ({isManual, setIsManual}) => {
                         />
                 
                     </div>
-
-            
                 ))}
             <div className="exitModalDiv">
                 <AiFillPlusCircle 
@@ -88,7 +74,6 @@ const  ManualAdd= ({isManual, setIsManual}) => {
                 onClick={() => addItem()}
                 />
             </div>
-
         </div>
       </div>
     );
