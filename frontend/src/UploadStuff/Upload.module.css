@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
 .UploadAdd {
     position: absolute;
     background-color: white;
@@ -30,5 +32,18 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .add-manually {
+    border: none;
+    background-color: white;
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: white;
+    cursor: pointer;
+  }
+
+  .add-manually:hover {
+    text-decoration: underline;
   }
   

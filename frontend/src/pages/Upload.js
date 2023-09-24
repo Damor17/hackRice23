@@ -16,6 +16,7 @@ const Upload = () => {
         {!file && <h2 className={UploadCSS["UploadHeaderText"]}>Upload Your Plate or a Nutrition Label</h2>}
         {file && <img className={UploadCSS["UploadImage"]} src={file} />}
       </div>
+      <button className={UploadCSS["add-manually"]}>or add items manually</button>
     </div>
   );
 }
