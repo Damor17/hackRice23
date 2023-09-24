@@ -1,20 +1,25 @@
 import { useState } from "react";
-import {AiFillCaretDown} from 'react-icons/ai'
 import UploadCSS from "../UploadStuff/Upload.module.css"
+import UploadGoAway from "../UploadStuff/UploadGoAway";
+import HomeCSS from "../Home.module.css";
+import { useNavigate } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
 
 const Upload = () => {
+  const navigate = useNavigate();
   const [file, setFile] = useState()
-
-  function handleChange(e) {
-      setFile(URL.createObjectURL(e.target.files[0]));
-  }
   
   return (
-    <div className={UploadCSS["UploadAdd"]}>
-      <input type="file" onChange={handleChange} />
-      <div className={UploadCSS["UploadImgContainer"]}>
-        {!file && <h2 className={UploadCSS["UploadHeaderText"]}>Upload Your Plate or a Nutrition Label</h2>}
-        {file && <img className={UploadCSS["UploadImage"]} src={file} />}
+    <div className={UploadCSS["upload-page"]}>
+      <header className={HomeCSS["home-header"]}>
+        <h2 style={{cursor: "pointer"}} onClick={() => navigate("/")}>TRACK RICE</h2>
+        <FiMenu className={HomeCSS["menu-icon"]} />
+      </header>
+      <div className={UploadCSS["UploadAdd"]}>
+        <div className={UploadCSS["UploadImgContainer"]}>
+          {!file && <UploadGoAway setFile={setFile} />}
+          {file && <img className={UploadCSS["UploadImage"]} src={file} />}
+        </div>
       </div>
       <button className={UploadCSS["add-manually"]}>or add items manually</button>
     </div>
