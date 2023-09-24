@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
-
+s
 const Graph1 = ({ onDayClick }) => {
   const randomData = Array.from({ length: 30 }, () => Math.floor(300 + Math.random() * 30));
   const randomData2 = Array.from({ length: 30 }, () => Math.floor(600 + Math.random() * 150));
@@ -120,7 +120,7 @@ const Graph1 = ({ onDayClick }) => {
         name: 'Protein',
         type: 'line',
         stack: 'Total',
-        smooth: true, // Enable smoothing for a stacked area chart
+        smooth: true,
         areaStyle: {
           opacity: 0.4,
           color: 'rgba(255, 0, 0, 0.8)',
