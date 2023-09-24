@@ -18,7 +18,7 @@ const Home = () => {
           <h1 className={HomeCSS["track"]}>TRACK</h1>
           <h1 className={HomeCSS["rice"]}>RICE</h1>
         </div>
-        <button className={HomeCSS["your-plates"]}onClick={() => navigate("/meals-page")}>your plates</button>
+        <button className={HomeCSS["your-plates"]}onClick={() => navigate("/upload")}>your plates</button>
       </div>
     </div>
   );
