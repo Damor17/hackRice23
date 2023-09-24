@@ -125,6 +125,9 @@ code {
   text-decoration: underline;
 
 }
+.catCardFooterText:hover {
+  cursor: pointer;
+}
 
 .catHeaderButtonImage {
   width:50px;
@@ -163,7 +166,7 @@ code {
   position: absolute;
   left: 20%;
   right: 20%;
-  top:18%;
+  top:20%;
   z-index: 2;
   background-color: #9CBD97;
 
