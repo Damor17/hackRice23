@@ -7,6 +7,7 @@ import { FiMenu } from "react-icons/fi";
 import { AiFillCloseSquare } from "react-icons/ai";
 
 const Upload = () => {
+  const navigate = useNavigate();
   const [file, setFile] = useState()
 
   function handleChange(e) {

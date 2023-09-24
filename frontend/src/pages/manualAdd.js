@@ -71,7 +71,7 @@ const  ManualAdd= () => {
                 />
               </div>
         ))}
-        <button className="confirm-entry-btn">Confirm Entry</button>
+        <button className="confirm-entry-btn" onClick={() => navigate("/meals-page")}>Confirm Entry</button>
       </div>
     </div>
   );
