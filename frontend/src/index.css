@@ -33,11 +33,11 @@ code {
 .catCard {
   margin-top: 5%;
   padding: 10px;
-  background-color:#666953;
+  background-color:#304529;
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.4);
   min-width: 20%;
   max-width: 300px;
-  height: 420px;
+  height: 430px;
 }
 
 .catHeader {
@@ -125,6 +125,7 @@ code {
   padding: 2px;
   text-decoration: underline;
   margin-top: -28px;
+  margin-left: 18f0px;
   font-family: 'Lora', serif;
 }
 
@@ -143,7 +144,7 @@ code {
 
 .catHeaderButtonImage:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: transform 0.3s;
 }
 
