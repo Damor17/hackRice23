@@ -1,7 +1,9 @@
 import ItemInCard from "./itemInCard"
 import { IoAddCircleOutline } from "react-icons/io5"
 
+
 const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, dayDate }) => {
+
     if (mealData.length === 0) {
         return <div style={{marginTop: "30px"}}>Loading...</div>;
     }
@@ -74,7 +76,8 @@ const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, d
             </div>
 
             <div className="catCardFooter">
-                <p className="catCardFooterText">See more details...</p>
+                <p 
+                className="catCardFooterText">See more details...</p>
             </div>
         </div>
     );

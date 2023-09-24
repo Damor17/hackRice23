@@ -1,45 +1,93 @@
 import { useState } from "react";
+import {AiFillCaretLeft} from 'react-icons/ai'
 
-const  ManualAdd= ({type, amount}) => {
+import {AiFillPlusCircle} from "react-icons/ai"
 
-    const [inputValue, setInputValue] = useState('');
-
- 
-    function handleInputChange(item) {
-        if (item == 'Food Name') {
-            initialForm.egg = item
-        }
-        console.log(initialForm)
-  };
-
-    const initialForm = {
-        egg: {grams: 10, Carbs: 10, Protein:80, Fat: 20 , Calories: 20}
+const  ManualAdd= ({isManual, setIsManual}) => {
+    const initialFormInside = {
+        grams: 0, 
+        Carbs: 0, 
+        Protein:0, 
+        Fat: 0 , 
+        Calories: 0,
 
     }
 
-    const blanks = ['Food Name', 'Grams', 'Carbs', 'Protein', 'Fat', 'Calories']
+    const initialForm = {
 
-    const [form, setForm] = useState(initialForm)
+    }
 
+    const [inputValues, setInputValues] = useState({});
+
+
+ 
+    function handleInputChange(fieldName, value) {
+        setInputValues({ ...inputValues, [fieldName]: value });
+
+  };
+
+  function addItem() {
+    const updatedObject = { ...inputValues };
+    let food = updatedObject.Food
+    delete updatedObject[food]
+    setInputValues(updatedObject)
+    initialForm[food] = inputValues
+    //ADD TO DATABASE
+
+
+    setInputValues({})
+    setIsManual(false)
+
+
+  }
+
+    const blanks = ['Food', 'Grams', 'Carbs', 'Protein', 'Fat', 'Calories']
+
+    
 
 
     return (
       <div className="ManualAdd">
+        <div>
+            <AiFillCaretLeft color="white" size={30} onClick={() => setIsManual(false)}/>
+
+        </div>
         <div className="ManualAdd2">
             {blanks.map((item, index) => (
-                <div className="formItem" key={index}>
-                    <label htmlFor="text-input">{item}:</label>
-                    <input
-                            type="text"
-                            id="text-input"
-                            value={inputValue}
-                            onChange={() => handleInputChange(item)}
-                    />
-                    <p>{inputValue}</p>
-                </div>
-                ))}
-            
 
+
+                item == 'Food' ? (
+                    <div className="formItem" key={index}>
+                        <label htmlFor="text-input" className="labelAdd">{item}:</label>
+                        <input
+                                type="text"
+                                id={index}
+                                value={inputValues[item] || ''}
+                                onChange={(e) => handleInputChange(item, e.target.value)}
+                        />
+                
+                    </div>
+
+                ) : <div className="formItem" key={index}>
+                        <label htmlFor="numeric-input" className="labelAdd">{item}:</label>
+                        <input
+                                type="number"
+                                id={index}
+                                value={inputValues[item] || ''}
+                                onChange={(e) => handleInputChange(item, e.target.value)}
+                        />
+                
+                    </div>
+
+            
+                ))}
+            <div className="exitModalDiv">
+                <AiFillPlusCircle 
+                className="addIconManual"
+                color="white" size={70}
+                onClick={() => addItem()}
+                />
+            </div>
 
         </div>
       </div>
