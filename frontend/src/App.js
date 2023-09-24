@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Graphs from "./pages/Graphs.js";
 import Upload from "./pages/Upload.js";
-import ManualAdd from "./body/manualAdd.js";
+import ManualAdd from "./pages/manualAdd.js";
 
 function App() {
   const [mealData, setMealData] = useState([]);

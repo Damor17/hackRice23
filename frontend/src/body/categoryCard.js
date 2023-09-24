@@ -1,4 +1,4 @@
-import ItemInCard from "./itemInCard";
+import ItemInCard from "./itemInCard.js";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 

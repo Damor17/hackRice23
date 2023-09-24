@@ -1,7 +1,7 @@
-import CategoryCard from "./categoryCard";
+import CategoryCard from "./categoryCard.js";
 import { useState } from "react";
-import AddFoodModal from "./addFoodModal";
-import ManualAdd from "./manualAdd";
+import AddFoodModal from "./addFoodModal.js";
+import ManualAdd from "../pages/manualAdd.js";
 
 
 const Body = ({ mealData, setMealData, setIsChanger, dayDate }) => {
