@@ -2,7 +2,6 @@ import CategoryCard from "./categoryCard";
 import { useState } from "react";
 import AddFoodModal from "./addFoodModal";
 import ManualAdd from "./manualAdd";
-import UploadAdd from "./uploadAdd";
 
 
 const Body = ({ mealData, setMealData, setIsChanger, dayDate }) => {
@@ -20,9 +19,6 @@ const Body = ({ mealData, setMealData, setIsChanger, dayDate }) => {
           <AddFoodModal isModal={isModal} setIsModal= {setIsModal} isManual={isManual} setIsManual= {setIsManual} isUpload= {isUpload} setIsUpload= {setIsUpload} setIsChanger={setIsChanger}/>
         ): isManual ? (
           <ManualAdd isManual={isManual} setIsManual= {setIsManual} setIsChanger={setIsChanger} />
-        ): isUpload ? (
-          <UploadAdd isUpload= {isUpload} setIsUpload= {setIsUpload} setIsChanger={setIsChanger} />
-
         ) : (
           <div className="divbody">
               {categories.map((mealType, index) => (
