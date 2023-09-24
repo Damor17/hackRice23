@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Upload from "./pages/Upload.js";
+import MealsPage from "./pages/MealsPage.js";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.js";
 import Graphs from "./pages/Graphs.js";
+import Upload from "./pages/Upload.js";
 
 function App() {
   const [mealData, setMealData] = useState([]);
@@ -28,8 +29,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/upload" element={<Upload mealData={mealData} setMealData={setMealData} />}/>
+        <Route path="/meals-page" element={<MealsPage mealData={mealData} setMealData={setMealData} />}/>
         <Route path="/graphs" element={<Graphs />}/>
+        <Route path="/upload" element={<Upload />} />
       </Routes>
     </div>
   );

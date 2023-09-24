@@ -1,8 +1,9 @@
-import ItemInCard from "./itemInCard"
-import { IoAddCircleOutline } from "react-icons/io5"
-
+import ItemInCard from "./itemInCard";
+import { IoAddCircleOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, dayDate }) => {
+    const navigate = useNavigate();
 
     if (mealData.length === 0) {
         return <div style={{marginTop: "30px"}}>Loading...</div>;
@@ -62,7 +63,7 @@ const CategoryCard = ({ mealType, mealData, isModal, setIsModal, setIsChanger, d
                 <div className="catHeaderHolders">
                     
                 </div>
-                <IoAddCircleOutline className="catHeaderButtonImage" onClick={() => addFood()}/>
+                <IoAddCircleOutline className="catHeaderButtonImage" onClick={() => navigate("/upload")}/>
                 <div className="catHeaderHolders">
                     
                 </div>
