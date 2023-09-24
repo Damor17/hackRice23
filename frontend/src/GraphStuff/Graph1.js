@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
 
-const Graph1 = () => {
+const Graph1 = ({ onDayClick }) => {
   const randomData = Array.from({ length: 30 }, () => Math.floor(300 + Math.random() * 30));
   const randomData2 = Array.from({ length: 30 }, () => Math.floor(600 + Math.random() * 150));
   const randomData3 = Array.from({ length: 30 }, () => Math.floor(400 + Math.random() * 300));
@@ -174,10 +174,29 @@ const Graph1 = () => {
       },
     ],
   };
-
+  const handleDayClick = (day) => {
+    // Call the onDayClick function passed as a prop with the selected day
+    onDayClick(day);
+  };
   return (
-    <div style={{ width: '600px', height: '400px' }}>
-      <ReactEcharts option={option} />
+    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+      <div style={{ width: '1200px', height: '800px', marginTop: '100px' }}>
+        <ReactEcharts
+          option={option}
+          // Add a click event listener to the chart
+          onEvents={{
+            click: (params) => {
+              // Check if the click event is on a specific data point
+              if (params.seriesType === 'line' && params.dataIndex !== undefined) {
+                // Extract the clicked day from your data
+                const clickedDay = xLabels[params.dataIndex];
+                // Call the handleDayClick function with the selected day
+                handleDayClick(clickedDay);
+              }
+            },
+          }}
+        />
+      </div>
     </div>
   );
 };

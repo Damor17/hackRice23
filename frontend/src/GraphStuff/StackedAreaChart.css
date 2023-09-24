@@ -1,40 +1,58 @@
-/* StackedAreaChart.css */
-
-/* Style for the chart container */
-.chart-container {
-  position: relative;
-  background-color: white; /* White background for the chart */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Style for the green overlay */
+.chart-container {
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .green-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 128, 0, 0.5); /* Green overlay with transparency */
-  display: none; /* Initially hidden */
+  background-color: #71966D;
+  display: none;
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* Style for the toggle button (unchanged) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 160px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.graph2-container {
+  background-color: #daead9;
+  border: 30px solid #93b290;
+  padding: 20px;
+}
+
 .toggle-button {
-  background-color: #00ba00;
+  background-color: #9CBD97;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  border: 2px solid #71966D;
+  padding: 5px 15px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .toggle-button:hover {
-  background-color: rgba(0, 128, 0, 0.5);
+  background-color: #71966D;
 }
 
 .toggle-button:active {
-  background-color: rgba(0, 128, 0, 0.5);
+  background-color: #71966D;
 }
