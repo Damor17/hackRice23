@@ -11,7 +11,11 @@ const Header = () => {
 
   return (
     <header className={HeaderCSS["upload-header"]}>
-      <h2 onClick={() => {navigate("/")}} className={HeaderCSS["cal-tracker-txt"]}>TRACK RICE</h2>
+      <div className={HeaderCSS["left-header"]}>
+        <h2 onClick={() => {navigate("/")}} className={HeaderCSS["cal-tracker-txt"]}>TRACK RICE</h2>
+        <div className={HeaderCSS["vertical-break"]}></div>
+        <h4 className={HeaderCSS["view-stats-txt"]} onClick={() => navigate("/graphs")}>view more stats</h4>
+      </div>
 
       <div className={HeaderCSS["right-header"]}>
         <img className={HeaderCSS["wheat-icon"]} src="./images/wheat.png" alt="wheat"/>

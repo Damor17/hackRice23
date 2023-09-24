@@ -8,6 +8,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Open Sans;
 }
 
 .privacy-text {
@@ -27,8 +28,9 @@ footer p:hover {
 
 .copyright-txt {
   position: absolute;
-  right: 20px;
-  color: #404232
+  right: 22px;
+  font-size: 11px;
+  color: #404232;
 }
 
 .day-changer {
@@ -38,10 +40,12 @@ footer p:hover {
   width: 180px;
   margin-left: auto;
   margin-right: auto;
+  font-family: Open Sans;
 }
 
 .day-changer * {
   margin-left: 8px;
+  color: #404232
 }
 
 .chevron {
