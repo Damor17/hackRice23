@@ -65,10 +65,6 @@ const StackedAreaChart = () => {
 
   // Prepare the option for the chart
   const option = {
-    title: {
-      text: 'Daily Calorie Intake',
-      x: 'center',
-    },
     legend: {
       data: ['Protein', 'Carbs', 'Fat', 'Other'],
       x: 'right',
@@ -179,15 +175,20 @@ const StackedAreaChart = () => {
 
   return (
     <div>
-      <div>
-        <button className="toggle-button" onClick={toggleDisplay}>
+      <div className="graph2-container">
+        <div className="green-overlay"></div>
+        <ReactECharts
+          option={cumulative ? getCumulativeOption(getCumulativeData()) : option}
+          style={{ height: '400px' }}
+        />
+      </div>
+
+      {/* Container for the cumulative button */}
+      <div className="button-container">
+        <button className="toggle-button" onClick={toggleDisplay} style={{ fontFamily: 'Open Sans, sans-serif', color: '#404232'}}>
           {cumulative ? 'Switch to Daily' : 'Switch to Cumulative'}
         </button>
       </div>
-      <ReactECharts
-        option={cumulative ? getCumulativeOption(getCumulativeData()) : option}
-        style={{ height: '400px' }}
-      />
     </div>
   );
 };

@@ -1,0 +1,49 @@
+body {
+    background-color: #e3efe1;
+}
+
+.page-container {
+    background-color: #dae7d8;
+}
+
+.banner-header {
+    position: relative;
+    background-color: #71966D;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.banner-title {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 4px;
+}
+
+.back-button {
+    position: absolute;
+    top: 14.2%;
+    left: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+}
+
+.back-button::before {
+    content: '\25C0';
+    font-size: 32px;
+    color: #9CBD97;
+}
+
+.chart-container {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    padding: 20px;
+}

@@ -7,9 +7,12 @@ import { FiMenu } from "react-icons/fi";
 import { AiFillCloseSquare } from "react-icons/ai";
 
 const Upload = () => {
-  const navigate = useNavigate();
   const [file, setFile] = useState()
-  
+
+  function handleChange(e) {
+      setFile(URL.createObjectURL(e.target.files[0]));
+  }
+
   return (
     <div className={UploadCSS["upload-page"]}>
       <header className={HomeCSS["home-header"]}>
