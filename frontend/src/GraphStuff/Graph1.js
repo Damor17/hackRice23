@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactEcharts from 'echarts-for-react';
-s
+
 const Graph1 = ({ onDayClick }) => {
   const randomData = Array.from({ length: 30 }, () => Math.floor(300 + Math.random() * 30));
   const randomData2 = Array.from({ length: 30 }, () => Math.floor(600 + Math.random() * 150));
